@@ -1,13 +1,11 @@
 package com.epam.cdp;
 
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/greeting")
 public class GreetingServlet extends HttpServlet {
 
     private static final String CONTENT_TYPE = "text/html";

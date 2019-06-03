@@ -1,0 +1,18 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+    <servlet>
+        <servlet-name>DemoServlet</servlet-name>
+        <servlet-class>com.epam.cdp.DemoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GreetingServlet</servlet-name>
+        <servlet-class>com.epam.cdp.GreetingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DemoServlet</servlet-name>
+        <url-pattern>/demo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GreetingServlet</servlet-name>
+        <url-pattern>/greeting</url-pattern>
+    </servlet-mapping>
+</web-app>
