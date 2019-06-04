@@ -17,7 +17,7 @@ public class DemoController {
     // Returns view name
     @RequestMapping(method = RequestMethod.GET, path = "view")
     public String viewName() {
-        return "test";
+        return "view";
     }
 
     // Returns view with modelMap
@@ -29,7 +29,7 @@ public class DemoController {
         return "modelMap";
     }
 
-    // Returns view with modelMap
+    // Returns modelAndView
     @RequestMapping(method = RequestMethod.GET, path = "modelview")
     public ModelAndView viewAndModelMap() {
         ModelAndView modelAndView = new ModelAndView();
