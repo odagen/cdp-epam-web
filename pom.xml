@@ -7,9 +7,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
+        <module>repository</module>
+        <module>service</module>
         <module>controller</module>
         <module>app-war</module>
-        <module>launcher</module>
     </modules>
 
     <name>servlet-web-app</name>
@@ -20,9 +21,19 @@
         <servlet.api.version>3.1.0</servlet.api.version>
         <tomcat.version>8.5.40</tomcat.version>
         <spring.version>4.3.24.RELEASE</spring.version>
+        <lombok.version>1.18.8</lombok.version>
+        <javax.validation>2.0.1.Final</javax.validation>
+        <hibernate.validator>5.4.3.Final</hibernate.validator>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
@@ -35,6 +46,20 @@
             <version>${servlet.api.version}</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${javax.validation}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate.validator}</version>
+        </dependency>
+
+        <!-- test scope dependencies -->
 
         <dependency>
             <groupId>junit</groupId>
